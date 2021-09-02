@@ -10,7 +10,9 @@ import udem.edu.co.vehiculos.interfaces.Vehiculo;
 
 /**
  *
- * @author s107e11
+ * @author Jou Jaramillo Uribe
+ * @since 2/09/2021
+ * @version 1.0
  */
 public class Moto extends NoPesado implements Vehiculo{
     

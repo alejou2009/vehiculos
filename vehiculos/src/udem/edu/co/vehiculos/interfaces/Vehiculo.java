@@ -7,7 +7,9 @@ package udem.edu.co.vehiculos.interfaces;
 
 /**
  *
- * @author s107e11
+ * @author Jou Jaramillo Uribe
+ * @since 2/09/2021
+ * @version 1.0
  */
 public interface Vehiculo {
     
