@@ -9,6 +9,7 @@ package udem.edu.co.vehiculos.interfaces;
  *
  * @author s107e11
  */
-public class Vehiculo {
+public interface Vehiculo {
     
+    public String transitar();
 }

@@ -5,18 +5,28 @@
  */
 package udem.edu.co.vehiculos;
 
+import udem.edu.co.vehiculos.abstrat.NoPesado;
+import udem.edu.co.vehiculos.interfaces.Vehiculo;
+
 /**
  *
  * @author s107e11
+ * @since 
+ * @version
  */
-public class Automovil {
+public class Automovil extends NoPesado implements Vehiculo{
     
     private String placa;
     private String marca;
 
     public Automovil(String placa, String marca) {
+        super();
         this.placa = placa;
         this.marca = marca;
+    }
+
+    public Automovil() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getPlaca() {
@@ -33,5 +43,15 @@ public class Automovil {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+    
+    @Override
+    public String toString() {
+        return "{ \"vehiculo\": {\n    \"tipo vehiculo\": \"automovil\",\n    \"valor peaje\": \""+super.getValorPeaje()+"\",\n    \"placa\": \""+this.getPlaca()+"\",\n    \"marca\": \""+this.getMarca()+"\",\n    \"transito\": \""+transitar()+"\"\n    }\n}";
+    }
+    
+    @Override
+    public String transitar() {
+        return "alta velocidad";
     }
 }

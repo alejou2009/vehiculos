@@ -9,6 +9,19 @@ package udem.edu.co.vehiculos.abstrat;
  *
  * @author s107e11
  */
-public class Pesado {
-    
+public abstract class Pesado {
+   
+    private int valorPeaje;
+
+    public Pesado() {
+        this.valorPeaje = 20000;
+    }
+
+    public int getValorPeaje() {
+        return valorPeaje;
+    }
+
+    public void setValorPeaje(int valorPeaje) {
+        this.valorPeaje = valorPeaje;
+    }
 }

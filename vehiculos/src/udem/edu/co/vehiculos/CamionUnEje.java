@@ -5,18 +5,26 @@
  */
 package udem.edu.co.vehiculos;
 
+import udem.edu.co.vehiculos.abstrat.Pesado;
+import udem.edu.co.vehiculos.interfaces.Vehiculo;
+
 /**
  *
  * @author s107e11
  */
-public class CamionUnEje {
+public class CamionUnEje extends Pesado implements Vehiculo{
     
     private String placa;
     private String marca;
 
     public CamionUnEje(String placa, String marca) {
+        super();
         this.placa = placa;
         this.marca = marca;
+    }
+
+    public CamionUnEje() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getPlaca() {
@@ -33,5 +41,15 @@ public class CamionUnEje {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    @Override
+    public String toString() {
+        return "{ \"vehiculo\": {\n    \"tipo vehiculo\": \"camion de un eje\",\n    \"valor peaje\": \""+super.getValorPeaje()+"\",\n    \"placa\": \""+this.getPlaca()+"\",\n    \"marca\": \""+this.getMarca()+"\",\n    \"transito\": \""+transitar()+"\"\n    }\n}";
+    }
+    
+    @Override
+    public String transitar() {
+        return "media velocidad";
     }
 }

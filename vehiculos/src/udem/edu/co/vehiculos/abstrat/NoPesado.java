@@ -9,6 +9,19 @@ package udem.edu.co.vehiculos.abstrat;
  *
  * @author s107e11
  */
-public class NoPesado {
+public abstract class NoPesado {
     
+    private int valorPeaje;
+
+    public NoPesado() {
+        this.valorPeaje = 12500;
+    }
+
+    public int getValorPeaje() {
+        return valorPeaje;
+    }
+
+    public void setValorPeaje(int valorPeaje) {
+        this.valorPeaje = valorPeaje;
+    }
 }
